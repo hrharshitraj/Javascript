@@ -1,0 +1,61 @@
+Javascript is a text based language used both on client side as well as server side that allows the web application to be interactive.
+
+* Data Types describe the different kinds of data we would be storing in a variable;
+Data Types in Javascript- (Primitive)
+1. Undefined
+2. Boolean
+3. Number
+4. String
+5. BigInt
+6. Symbol
+
+* We have 'var, let and const' as variables in Javascript, we don't manually need to assign data type ourselves.
+var myName = 'Harshit';
+
+How to find data type of given value?
+typeOf();
+
+console.log(typeOf(myName));	// O/P: String
+var myAge = 20;
+console.log(typeOf(myAge));	// O/P: Number
+var amIHarshit = true;
+console.log(typeOf(amIHarshit));	// O/P: Boolean
+
+# BUG-
+9 - "5" -> 4;
+
+** Difference between 'Null' and 'Undefined'-
+Null -> Intentional absence of the value in a variable.
+var useless = null;
+
+Undefined -> It means the value doesn't exist in the compiler.
+	  -> It is a global object.
+	  -> No value is assigned to the variable.
+var standBy;
+
+null==undefined -> true;
+null===undefined -> false;
+
+# BUG-
+Data type of 'null' is object, but 'null' is not an object;
+Data type of undefined is undefined;
+
+	      |-----------------------------------------------------------------|
+	      | NULL -> Variable is Empty, UNDEFINED -> Variable doesn't exist; |
+	      |-----------------------------------------------------------------|
+Undefined is used to access the values that doesn't exist;
+var temp = ['a','b','c'];
+if(temp[3]===undefined) console.log("Value doesn't exist");
+		else console.log(temp[3]);
+
+* Undefined is an ECMASCRIPT (ES1) feature;
+
+NaN -> Not a Number;
+NaN is a property of Global Object like undefined is;
+isNaN() returns if the value is not a number;
+
+In equality comparisons, NaN does not equals any value, including itself;
+NaN===NaN -> false, Not a number can't be identical to anything;
+isNaN(NaN) -> true;
+returns true on anything but number;
+
