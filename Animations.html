@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border: 1px solid black;
+        }
+        #box {
+            background-color: orangered;
+            width: 100px;
+            height: 100px;
+            transition: 1s ease all;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Click me!</button>
+    <div id="box">
+        <h4>Harshit</h4>
+    </div>
+    <script>
+        let btn = document.getElementById('btn');
+        btn.addEventListener('click', ()=> {
+            // document.getElementById('box').style.backgroundColor = 'Green';
+            // document.getElementById('box').style.marginLeft = '400px';
+            // To shift the box, left end will shift at right end;
+            // document.getElementById('box').style.transform = 'translateX(100%)'
+            // document.getElementById('box').style.marginLeft = '200px';
+            // document.getElementById('box').style.marginTop = '200px';
+            document.getElementById('box').style.transform = 'scale(2)'
+        })
+    </script>
+</body>
+</html>
