@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <form>
+        <h2>Form with DOM</h2>
+        <input type="text" id="email" placeholder="Email"><br><br>
+        <input type="password" id="pswd" placeholder="Password"><br><br>
+        <input type="number" id="number" placeholder="Age"><br><br>
+        <input type="submit" id="submit" value="Click Here">
+
+        <!-- Once we click on submit, our page automatically refreshed, even if inputs we have created are empty, We need to stop that. 
+        Only when we have some valid values in all the inputs, then only submit button should work. 
+    
+        One way to do that is using 'required'
+        <input type="text" id="email" placeholder="Email" required><br><br>
+        <input type="password" id="pswd" placeholder="Password" required><br><br>
+
+        submit -> If any of the input is empty, 
+        * Please fill out this field -->
+
+        
+    </form>
+    <!-- <button onclick="myFunction()">Click me</button> -->
+
+    <!-- <h3 id="colorChange">Click to change my color</h3> -->
+
+    <script>
+        /* To change the color on clicking-
+        var change = document.getElementById('colorChange');
+        document.getElementById('colorChange').style.cursor = 'Pointer';
+        change.onclick = function() {
+            document.getElementById('colorChange').style.color = 'Red';
+        } */
+
+        var email = document.getElementById('email');
+        var pswd = document.getElementById('pswd');
+        var submit = document.getElementById('submit');
+
+        /* Two ways to access click-
+
+        // submit.onclick = function() {
+        //     if(email.value!="" && pswd.value!="") {
+        //         document.write("Success");
+        //     }
+        //     else if(email.value=="") {
+        //         document.write("Please fill out the Email field");
+        //     }
+        //     else {
+        //         document.write("Please give Password");
+        //     }
+        // }
+
+        submit.addEventListener('click', ()=> {
+            // document.write("Using addEventListener");
+            if(email.value!="" && pswd.value!="") {
+                document.write("Success");
+            }
+            else if(email.value=="") {
+                document.write("Please fill out the fields");
+            }
+            else {
+                document.write("Please give Password");
+            }
+        })
+        */
+
+        var age = document.getElementById('number');
+        submit.addEventListener('click', ()=> {
+            if(ahe.value<18) {
+                alert('Not Eligible');
+            }
+            else {
+                document.write("Eligible");
+            }
+        })
+    </script>
+</body>
+</html>
